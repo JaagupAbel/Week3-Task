@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
 *{
-    margin: 5;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -15,10 +15,53 @@ html {
     margin-top: flex;
     height: 80vh;
     text-align: center;
-    position: relative;
-    
+    position: relative;    
 }
 
+/* 14.03.2022*/
+.modal {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(110, 97, 97, 0.226);
+    z-index: 2;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.modal-content {
+    background-color: rgb(157, 172, 179);
+    margin: 5% auto;
+    padding: 5rem;
+    width: 600px;
+    height: 600px;
+    border-radius:15px;
+    animation:zoom-in 1s;
+}
+
+@keyframes zoom-in {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+
+
+.closeBtn {
+    float: right;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.movie-poster-modal {
+    width: 300px;
+    border-radius:10px;
+}
+
+.movie-poster {
+    width: 300px;
+    cursor: pointer;
+}
 /*Animation 1*/
 .movie-title {
     margin-top: 5rem;
@@ -28,7 +71,7 @@ html {
 }
 
 @keyframes slide-from-top {
-    80% {transform: translateY(20px);}
+    80% {transform: translateY(5px);}
     100% {transform: translateY(0);}
 }
 /*Animation 2*/
@@ -92,7 +135,7 @@ html {
 .movie-info-actions ul li {
     display: inline-block;
     margin-right: 1rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-bottom: 2rem;
     height: 50px;
     width: 50px;
@@ -112,7 +155,7 @@ html {
 }
 
 footer {
-    margin-top: -10rem;
+    margin-top: 0rem;
     text-align: center;
     color: #777;
 }
